@@ -1,6 +1,6 @@
 // @ts-check
 import { spawn } from 'child_process'
-import asar from '@electron/asar'
+import * as asar from '@electron/asar'
 import prompts from 'prompts'
 import yargs from 'yargs'
 import chalk from 'chalk'
@@ -237,7 +237,7 @@ const patchApp = async () => {
 switch (argv._[0]) {
   case 'patch':
     await patchApp()
-    breaky
+    break
   case 'restore':
     try {
       console.log(chalk.blueBright`[+] Restoring HTTP Toolkit...`)
